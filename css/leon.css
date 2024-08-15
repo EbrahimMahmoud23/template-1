@@ -9,6 +9,10 @@ body {
   font-family: "Work Sans", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   padding-left: 10px;
   padding-right: 10px;
@@ -57,7 +61,7 @@ body {
 .header .container {
   display: flex;
   justify-content: space-between;
-  align-items: centers;
+  align-items: center;
 }
 
 .header .logo {
@@ -265,6 +269,15 @@ body {
   height: calc(100% + 100px);
   z-index: -1;
 }
+
+@media (max-width: 1199px) {
+  .Servises .Servises-content .image::before {
+    width: 0;
+  }
+  .image-col {
+    display: none;
+  }
+}
 /* end Servises  */
 /* start portfolio */
 .portfolio {
@@ -328,10 +341,23 @@ body {
   justify-content: space-between;
 }
 
+@media (max-width: 991px) {
+  .About .About-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 .About .About-content .image {
   position: relative;
   width: 250px;
   height: 250px;
+}
+
+@media (max-width: 991px) {
+  .About .About-content .image {
+    margin: 0 auto 60px;
+  }
 }
 
 .About .About-content .image img {
@@ -359,6 +385,13 @@ body {
   border-left: 80px solid var(--mainColor);
   border-bottom: 70px solid var(--mainColor);
   z-index: -1;
+}
+
+@media (max-width: 991px) {
+  .About .About-content .image::before,
+  .About .About-content .image::after {
+    display: none;
+  }
 }
 
 .About .About-content .text {
